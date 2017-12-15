@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h1>Simple Guestbook</h1>
+    <form method="post">
+        <div>
+            <input name="name" type="text" placeholder="your name"/>
+        </div>
+        <div>
+            <input name="email" type="text" placeholder="your email"/>
+        </div>
+        <div>
+            <textarea name="nachricht">
+
+            </textarea>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+    <ul>
+        {% for nachricht in nachrichten %}
+        <li>
+            {{nachricht.name}}, {{nachricht.email}}, {{nachricht.nachricht}}
+            <a href="/message/{{nachricht.key.id()}}">Details</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

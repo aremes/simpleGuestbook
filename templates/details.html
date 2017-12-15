@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+    <form method="post">
+        <div>
+            <input value="{{message.name}}" name="name" type="text" placeholder="your name"/>
+        </div>
+        <div>
+            <input value="{{message.email}}" name="email" type="text" placeholder="your email"/>
+        </div>
+        <div>
+            <textarea name="nachricht">{{message.nachricht}}</textarea>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
